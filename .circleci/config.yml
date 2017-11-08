@@ -8,7 +8,7 @@ workflows:
           cron: '* * * * *'
           filters:
             branches:
-              only: '/.*/'
+              only: '/--master/'
     jobs:
       - small
   regular_workflow:
