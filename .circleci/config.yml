@@ -11,6 +11,9 @@ workflows:
               only: '/master/'
     jobs:
       - small
+  regular_workflow:
+    jobs:
+      - small
 
 jobs:
   small:
