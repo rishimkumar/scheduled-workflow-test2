@@ -8,12 +8,15 @@ workflows:
           cron: '* * * * *'
           filters:
             branches:
-              only: '/--zzmaster/'
+              only: '/master/'
     jobs:
-      - small
+      - small:
+          context: organization-wide
+
   regular_workflow:
     jobs:
-      - small
+      - small:
+          context: organization-wide
 
 jobs:
   small:
