@@ -8,7 +8,7 @@ workflows:
           cron: '* * * * *'
           filters:
             branches:
-              only: '/master/'
+              only: '/no_schedules/'
     jobs:
       - small:
           context: organization-wide
