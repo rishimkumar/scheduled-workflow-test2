@@ -2,21 +2,11 @@ version: 2
 debug: true
 workflows:
   version: 2
-  scheduled_workflow:
-    triggers:
-      - schedule:
-          cron: '* * * * *'
-          filters:
-            branches:
-              only: '/no_schedules/'
-    jobs:
-      - small:
-          context: organization-wide
-
   regular_workflow:
     jobs:
-      - small:
-          context: organization-wide
+      - ask:
+          type: approval
+
 
 jobs:
   small:
