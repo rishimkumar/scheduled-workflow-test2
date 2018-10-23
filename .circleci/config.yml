@@ -4,8 +4,7 @@ workflows:
   version: 2
   regular_workflow:
     jobs:
-      - ask:
-          type: approval
+      - small
 
 
 jobs:
