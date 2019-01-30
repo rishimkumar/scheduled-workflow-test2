@@ -5,7 +5,8 @@ workflows:
   regular_workflow:
     jobs:
       - small
-
+      - small
+      - small
 
 jobs:
   small:
