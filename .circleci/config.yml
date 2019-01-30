@@ -5,11 +5,23 @@ workflows:
   regular_workflow:
     jobs:
       - small
-      - small
-      - small
+      - small2
+      - small3
 
 jobs:
   small:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - run: sleep 60 && echo $CIRCLE_JOB
+    resource_class: small
+  small2:
+    docr:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - run: sleep 60 && echo $CIRCLE_JOB
+    resource_class: small
+  small3:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
