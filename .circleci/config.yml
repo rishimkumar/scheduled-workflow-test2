@@ -10,21 +10,20 @@ workflows:
 
 jobs:
   small:
-    executor: docker
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - run: sleep 60 && echo $CIRCLE_JOB
-    resource_class: small
+    resource_class: medium
   small2:
     docr:
       - image: circleci/ruby:2.4.1
     steps:
       - run: sleep 60 && echo $CIRCLE_JOB
-    resource_class: small
+    resource_class: medium
   small3:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - run: sleep 60 && echo $CIRCLE_JOB
-    resource_class: small
+    resource_class: medium
